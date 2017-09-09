@@ -12,15 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-    // dd('s');
+    return view('omah');
 });
 
 Route::group(['middleware' => 'auth'], function () {
     //    Route::get('/link1', function ()    {
 //        // Uses Auth Middleware
 //    });
-    
+// return view('welcome');
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes
 });
