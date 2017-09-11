@@ -16,7 +16,7 @@
     }
     #body{
         background-image: url( {{ asset('img/background.png') }} );
-        font-family: lato;
+        font-family: "lato" ,sans-serif;
         background-size:cover;
         background-repeat: no-repeat;
     }
@@ -74,9 +74,9 @@
                                 <a href="{{ url('/login') }}" style="text-decoration: none"><input type="submit" class="form-control btn btn-default" style="text-align: left" value="Login" /></a>
                         </div>
                         <div class="inner-addon right-addon" style="margin-top: 10px;color: white">
-                            <i class="glyphicon fa fa-user-plus"></i>
+                            <i class="glyphicon fa fa-plus"></i>
                                 <a href="{{ url('/register') }}" style="text-decoration: none"><input type="submit" class="btn btn-primary form-control" style="text-align: left;" value="Register" /></a>
-                        </div>
+                        </div><br>
                         <h4 id="copyrights">&copy;2017 Rpl_Smakgu</h4>
                     </div>
                 </div>
@@ -85,11 +85,3 @@
         @endif
 </body>
 </html>
-
-
-
-<!-- <h4 align="center" class="judul">Silahkan anda pilih</h4><br>
-                        <center><a href="{{ url('/login') }}"><button class="form-control btn btn-default">Login <i class="fa fa-sign-in" id="icon"></i> </button></a></center><br>
-                        <center><a href="{{ url('/register') }}"><button id="tombolregister" class="form-control btn btn-primary">Register<i class="fa fa-user-plus" id="icon2"></i></button></a></center><br>
-                        <h4 id="copyrights">&copy;2017 Rpl_Smakgu</h4> -->
-
