@@ -74,7 +74,7 @@
                         </div><!-- /.col -->
                     </div>
                 </form>
-                <a style="color: white" href="{{ url('/login') }}" class="text-center">{{ trans('adminlte_lang::message.membreship') }}</a>
+                <a style="color: white" href="{{ url('/login') }}" class="text-center">Sudah Memiliki Akun !</a>
             </div><!-- /.form-box -->
         </div><!-- /.register-box -->
     </div>
