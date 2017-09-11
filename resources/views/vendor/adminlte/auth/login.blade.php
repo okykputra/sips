@@ -35,8 +35,7 @@
             </div>
         @endif
 
-        <div class="login-box-body" style="background:rgba(0,0,0,0.1);margin-top: -60px">
-        <p class="login-box-msg" style="color:white;">Silahkan anda masuk</p>
+        <div class="login-box-body" style="background:rgba(0,0,0,0.1);margin-top: -60px"><br>
         <form action="{{ url('/login') }}" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group has-feedback">

@@ -59,6 +59,9 @@
 /* add padding  */
     .left-addon input  { padding-left:  30px; }
     .right-addon input { padding-right: 30px; }
+    #panel{
+        margin-top: -30px;
+    }
 </style>
 <!-- end css -->
 <body id="body"><br>
@@ -70,13 +73,16 @@
                 <div class="col-sm-4 col-sm-offset-4">
                    <center><h1 id="header"><b id="wel">Wel</b>come</center><br>
                     <div class="login">
+                         <div class="panel panel-info" id="panel">
+                              <div class="panel-heading">Silahkan anda pilih untuk masuk atau daftar</div>
+                            </div>
                         <div class="inner-addon right-addon">
                             <i class="glyphicon fa fa-sign-in"></i>
-                                <a href="{{ url('/login') }}" style="text-decoration: none"><input type="submit" class="form-control btn btn-default" style="text-align: left" value="Login" /></a>
+                                <a href="{{ url('/login') }}" style="text-decoration: none"><input type="submit" class="form-control btn btn-default" style="text-align: left;font-family: sans-serif;" value="Login" /></a>
                         </div>
                         <div class="inner-addon right-addon" style="margin-top: 10px;color: white">
                             <i class="glyphicon glyphicon-user"></i>
-                                <a href="{{ url('/register') }}" style="text-decoration: none"><input type="submit" class="btn btn-primary form-control" style="text-align: left;" value="Register" /></a>
+                                <a href="{{ url('/register') }}" style="text-decoration: none"><input type="submit" class="btn btn-primary form-control" style="text-align: left;font-family: sans-serif;" value="Register" /></a>
                         </div><br>
                         <h4 id="copyrights">&copy;2017 Rpl_Smakgu</h4>
                     </div>
