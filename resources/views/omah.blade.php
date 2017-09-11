@@ -17,6 +17,8 @@
     #body{
         background-image: url( {{ asset('img/background.png') }} );
         font-family: lato;
+        background-size:cover;
+        background-repeat: no-repeat;
     }
     .login{
         padding: 50px;
@@ -50,7 +52,7 @@
     }
 </style>
 <!-- end css -->
-<body id="body" class="img-responsive"><br>
+<body id="body"><br>
     @if (Route::has('login'))
         @if (Auth::check())
                 <a href="{{ url('/home') }}">Home</a>

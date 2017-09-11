@@ -6,11 +6,11 @@
 
 @section('content')
 
-<body style="background-image: url( {{ asset('img/background.png') }} );">
+<body style="background-image: url( {{ asset('img/background.png') }} );background-size: cover">
     <div id="app">
         <div class="register-box">
             <div class="register-logo">
-                <a href="{{ url('/') }}" style="text-decoration: none;"><center><h1 id="header"><b>Wel</b>come</center><br></a>
+                <a href="{{ url('/') }}" style="text-decoration: none;"><center><h1 style="color: #2c3e50;"><b>Wel</b>come</center><br></a>
             </div>
 
             @if (count($errors) > 0)
