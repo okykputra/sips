@@ -19,7 +19,7 @@
     <div id="app">
         <div class="login-box">
             <div class="login-logo">
-                <a href="{{ url('/') }}" style="text-decoration: none;"><center><h1 style="color: #2c3e50;"><b id="wel">Log</b>in</center><br></a>
+                <a href="{{ url('/') }}" title="home" style="text-decoration: none;"><center><h1 style="color: #2c3e50;"><b id="wel">Log</b>in</center><br></a>
             </div><!-- /.login-logo -->
 
         @if (count($errors) > 0)
@@ -34,6 +34,9 @@
         @endif
 
         <div class="login-box-body" style="background:rgba(0,0,0,0.1);margin-top: -60px"><br>
+        <div class="panel panel-info" id="panel">
+                              <div class="panel-heading"><i class="fa fa-exclamation-triangle"></i> Silahkan anda masuk , belum punya akun? <a href="{{ url('/register')}}" style="text-decoration: none">daftar</a></div>
+                            </div>
         <form action="{{ url('/login') }}" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group has-feedback">
@@ -53,7 +56,7 @@
                     </div>
                 </div><!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('adminlte_lang::message.buttonsign') }}</button>
+                    <button title="Masuk" type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('adminlte_lang::message.buttonsign') }}</button>
                 </div><!-- /.col -->
             </div>
         </form>

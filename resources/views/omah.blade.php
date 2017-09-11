@@ -74,15 +74,15 @@
                    <center><h1 id="header"><b id="wel">Wel</b>come</center><br>
                     <div class="login">
                     <div class="panel panel-info" id="panel">
-                              <div class="panel-heading">Silahkan anda pilih untuk masuk atau daftar</div>
+                              <div class="panel-heading"><i class="fa fa-exclamation-triangle"></i> Silahkan anda pilih untuk masuk atau daftar</div>
                             </div>
                         <div class="inner-addon right-addon">
                             <i class="glyphicon fa fa-sign-in"></i>
-                                <a href="{{ url('/login') }}" style="text-decoration: none"><input type="submit" class="form-control btn btn-default" style="text-align: left;font-family: sans-serif;" value="Login" /></a>
+                                <a href="{{ url('/login') }}" style="text-decoration: none"><input type="submit" class="form-control btn btn-default" title="Masuk" style="text-align: left;font-family: sans-serif;" value="Login" /></a>
                         </div>
                         <div class="inner-addon right-addon" style="margin-top: 10px;color: white">
                             <i class="glyphicon glyphicon-user"></i>
-                                <a href="{{ url('/register') }}" style="text-decoration: none"><input type="submit" class="btn btn-primary form-control" style="text-align: left;font-family: sans-serif;" value="Register" /></a>
+                                <a href="{{ url('/register') }}" style="text-decoration: none"><input type="submit" class="btn btn-primary form-control" title="daftar" style="text-align: left;font-family: sans-serif;" value="Register" /></a>
                         </div><br>
                         <h4 id="copyrights">&copy;2017 Rpl_Smakgu</h4>
                     </div>
