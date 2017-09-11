@@ -5,16 +5,22 @@
 @endsection
 
 @section('content')
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=lato">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=nexa">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=hero">
 <style>
     #wel{
         color:  #3498db;
+        font-family: hero light;
     }
+
 </style>
+
 <body style="background-image: url( {{ asset('img/background.png') }} );background-size: cover">
     <div id="app">
         <div class="register-box">
             <div class="register-logo">
-                <a href="{{ url('/') }}" style="text-decoration: none;"><center><h1 style="color: #2c3e50;"><b id="wel">Wel</b>come</center><br></a>
+                <a href="{{ url('/') }}" style="text-decoration: none; "><center><h1 style="color: #2c3e50;font-family: nexa"><b id="wel">Regis</b>ter</center><br></a>
             </div>
 
             @if (count($errors) > 0)

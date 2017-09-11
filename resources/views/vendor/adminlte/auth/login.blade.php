@@ -5,16 +5,23 @@
 @endsection
 
 @section('content')
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=lato">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=nexa">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=hero">
 <style>
     #wel{
         color:  #3498db;;
+    }
+        #header{
+        color: #2c3e50;
+        font-family: nexa;
     }
 </style>
 <body class="hold-transition login-page" style="background-image: url( {{ asset('img/background.png') }} );background-size: cover">
     <div id="app">
         <div class="login-box">
             <div class="login-logo">
-                <a href="{{ url('/') }}" style="text-decoration: none;"><center><h1 style="color: #2c3e50;"><b id="wel">Wel</b>come</center><br></a>
+                <a href="{{ url('/') }}" style="text-decoration: none;"><center><h1 style="color: #2c3e50;"><b id="wel">Log</b>in</center><br></a>
             </div><!-- /.login-logo -->
 
         @if (count($errors) > 0)
