@@ -20,6 +20,7 @@
         font-family: "lato" ,sans-serif;
         background-size:cover;
         background-repeat: no-repeat;
+        margin-top: 70px;
     }
     .login{
         padding: 50px;
@@ -64,7 +65,7 @@
     }
 </style>
 <!-- end css -->
-<body id="body"><br>
+<body id="body">
     @if (Route::has('login'))
         @if (Auth::check())
                 <a href="{{ url('/home') }}">Home</a>
@@ -72,7 +73,7 @@
         <!-- Form masuk atau daftar -->
                 <div class="col-sm-4 col-sm-offset-4">
                    <center><h1 id="header"><b id="wel">Wel</b>come</center><br>
-                    <div class="login">
+                    <div class="login"><br>
                     <div class="panel panel-info" id="panel">
                               <div class="panel-heading"><i class="fa fa-exclamation-triangle"></i> Silahkan anda pilih untuk masuk atau daftar</div>
                             </div>
