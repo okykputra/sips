@@ -32,11 +32,11 @@
     #wel{
         color: #3498db;
         font-weight: bolder;
-        font-family: nexa;
+        font-family: "nexa" ,sans-serif;
     }
     #copyrights{
         float: right;
-        font-family: lato;
+        font-family: "lato" ,sans-serif;
         font-size: 12px;
         color: white;
     }
