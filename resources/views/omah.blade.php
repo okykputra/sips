@@ -21,6 +21,17 @@
 </style>
 <!-- end css -->
 <body id="body">
- <center><h1 id="header">Wel<b id="come">come</b></center>
+ <center><h1 id="header">Wel<b id="come">come</b></center><br>
+        @if (Route::has('login'))
+                @if (Auth::check())
+                    <a href="{{ url('/hal') }}">Home</a>
+                @else
+                <div class="col-md-4 col-md-offset-4">
+                    <center><a href="{{ url('/login') }}" style="color: black;"><button class="form-control btn btn-default">Login</button></a></center><br>
+                    <center><a href="{{ url('/register') }}" style="color: black;"><button class="form-control btn btn-info">Register</button></a></center> 
+                </div>
+                @endif
+        @endif
 </body>
 </html>
+
