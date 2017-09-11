@@ -1,8 +1,6 @@
 @extends('adminlte::layouts.auth')
 
-@section('htmlheader_title')
-    Log in
-@endsection
+<title>Log In</title>
 
 @section('content')
 <style>

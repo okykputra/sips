@@ -1,8 +1,6 @@
 @extends('adminlte::layouts.auth')
 
-@section('htmlheader_title')
-    Register
-@endsection
+<title>Register</title>
 
 @section('content')
 <style>

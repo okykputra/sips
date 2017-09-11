@@ -64,7 +64,7 @@
                         <h4 align="center" class="judul">Silahkan anda pilih</h4><br>
                         <center><a href="{{ url('/login') }}"><button class="form-control btn btn-default"> Login <i class="fa fa-sign-in" id="icon"></i> </button></a></center><br>
                         <center><a href="{{ url('/register') }}"><button id="tombolregister" class="form-control btn btn-primary">Register<i class="fa fa-user-plus" id="icon2"></i></button></a></center><br>
-                        <h4 id="copyrights">&copy;2017 Rpl_Smakgu</h4>
+                        <h4 id="copyrights"><a href="#!">&copy;2017 Rpl_Smakgu</a></h4>
                     </div>
                 </div>
         <!--End form masuk atau daftar -->
