@@ -37,6 +37,7 @@
         <div class="panel panel-info" id="panel">
                               <div class="panel-heading"><i class="fa fa-exclamation-triangle"></i> Silahkan anda masuk , belum punya akun? <a href="{{ url('/register')}}" style="text-decoration: none">daftar</a></div>
                             </div>
+                            
         <form action="{{ url('/login') }}" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group has-feedback">
