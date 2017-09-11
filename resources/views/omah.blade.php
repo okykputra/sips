@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=lato">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=nexa">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=hero">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 </head>
 <!-- untuk css -->
 <style>
     #header{
         color: #2c3e50;
-        font-family: lato;
+        font-family: nexa;
     }
     #body{
         background-image: url( {{ asset('img/background.png') }} );
@@ -31,7 +32,7 @@
     #wel{
         color: #3498db;
         font-weight: bolder;
-        font-family: lato;
+        font-family: nexa;
     }
     #copyrights{
         float: right;
@@ -80,7 +81,7 @@
                                 <a href="{{ url('/login') }}" style="text-decoration: none"><input type="submit" class="form-control btn btn-default" style="text-align: left" value="Login" /></a>
                         </div>
                         <div class="inner-addon right-addon" style="margin-top: 10px;color: white">
-                            <i class="glyphicon fa fa-plus"></i>
+                            <i class="glyphicon glyphicon-user"></i>
                                 <a href="{{ url('/register') }}" style="text-decoration: none"><input type="submit" class="btn btn-primary form-control" style="text-align: left;" value="Register" /></a>
                         </div><br>
                         <h4 id="copyrights">&copy;2017 Rpl_Smakgu</h4>
