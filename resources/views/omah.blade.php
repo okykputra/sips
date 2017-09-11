@@ -73,13 +73,18 @@
                 <div class="col-sm-4 col-sm-offset-4">
                    <center><h1 id="header"><b id="wel">Wel</b>come</center><br>
                     <div class="login">
-                         <div class="panel panel-info" id="panel">
+                    <div class="panel panel-info" id="panel">
                               <div class="panel-heading">Silahkan anda pilih untuk masuk atau daftar</div>
                             </div>
-                        <h4 align="center" class="judul">Silahkan anda pilih</h4><br>
-                        <center><a href="{{ url('/login') }}"><button class="form-control btn btn-default"> Login <i class="fa fa-sign-in" id="icon"></i> </button></a></center><br>
-                        <center><a href="{{ url('/register') }}"><button id="tombolregister" class="form-control btn btn-primary">Register<i class="fa fa-user-plus" id="icon2"></i></button></a></center><br>
-                        <h4 id="copyrights"><a href="#!">&copy;2017 Rpl_Smakgu</a></h4>
+                        <div class="inner-addon right-addon">
+                            <i class="glyphicon fa fa-sign-in"></i>
+                                <a href="{{ url('/login') }}" style="text-decoration: none"><input type="submit" class="form-control btn btn-default" style="text-align: left;font-family: sans-serif;" value="Login" /></a>
+                        </div>
+                        <div class="inner-addon right-addon" style="margin-top: 10px;color: white">
+                            <i class="glyphicon glyphicon-user"></i>
+                                <a href="{{ url('/register') }}" style="text-decoration: none"><input type="submit" class="btn btn-primary form-control" style="text-align: left;font-family: sans-serif;" value="Register" /></a>
+                        </div><br>
+                        <h4 id="copyrights">&copy;2017 Rpl_Smakgu</h4>
                     </div>
                 </div>
         <!--End form masuk atau daftar -->
