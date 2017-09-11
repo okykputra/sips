@@ -8,29 +8,39 @@
 <!-- untuk css -->
 <style>
     #header{
-        font-family: nexa;
         color: white;
         padding-top: 20px;
-    }
-    #come{
-        font-family: hero light;
+        color: #2c3e50;
     }
     #body{
-        background-color: #3498db;
+        background-color: #bdc3c7;
+        font-family: "Roboto", Helvetica, Arial, sans-serif;
+    }
+    .login{
+        background-color: white;
+        padding: 50px;
+    }
+    .judul{
+        margin-top: -20px;
     }
 </style>
 <!-- end css -->
-<body id="body">
- <center><h1 id="header">Wel<b id="come">come</b></center><br>
-        @if (Route::has('login'))
-                @if (Auth::check())
-                    <a href="{{ url('/hal') }}">Home</a>
-                @else
-                <div class="col-md-4 col-md-offset-4">
-                    <center><a href="{{ url('/login') }}" style="color: black;"><button class="form-control btn btn-default">Login</button></a></center><br>
-                    <center><a href="{{ url('/register') }}" style="color: black;"><button class="form-control btn btn-info">Register</button></a></center> 
+<body id="body"><br>
+    @if (Route::has('login'))
+        @if (Auth::check())
+                <a href="{{ url('/home') }}">Home</a>
+        @else
+        <!-- Form masuk atau daftar -->
+                <div class="col-sm-4 col-sm-offset-4">
+                   <center><h1 id="header"><b>Wel</b>come</center><br>
+                    <div class="login">
+                        <h4 align="center" class="judul">Silahkan anda pilih</h4><br>
+                        <center><a href="{{ url('/login') }}" style="color: black;"><button class="form-control btn btn-default">Login</button></a></center><br>
+                        <center><a href="{{ url('/register') }}" style="color: black;"><button class="form-control btn btn-primary">Register</button></a></center><br>
+                    </div>
                 </div>
-                @endif
+        <!--End form masuk atau daftar -->
+            @endif
         @endif
 </body>
 </html>
