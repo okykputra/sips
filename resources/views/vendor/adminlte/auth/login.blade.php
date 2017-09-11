@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background-image: url( {{ asset('img/background.png') }} );">
     <div id="app">
         <div class="login-box">
             <div class="login-logo">
@@ -23,8 +23,7 @@
             </div>
         @endif
 
-        <div class="login-box-body">
-        <p class="login-box-msg"> {{ trans('adminlte_lang::message.siginsession') }} </p>
+        <div class="login-box-body" style="background:rgba(0,0,0,0.1);">
         <form action="{{ url('/login') }}" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group has-feedback">
@@ -36,8 +35,8 @@
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">
-                <div class="col-xs-8">
-                    <div class="checkbox icheck">
+                <div class="col-xs-8" >
+                    <div class="checkbox icheck" style="color: white">
                         <label>
                             <input type="checkbox" name="remember"> {{ trans('adminlte_lang::message.remember') }}
                         </label>

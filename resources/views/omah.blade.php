@@ -27,19 +27,26 @@
         color: white;
     }
     #icon{
-        float: right;
-        padding: 4px;
         color: #2c3e50;
+        margin-left: 10px;
     }
     #icon2{
-        float: right;
-        padding: 4px;
         color: white;
+        margin-left: 10px;
     }
     #wel{
         color: #3498db;
         font-weight: bolder;
-        font-family: nexa;
+        font-family: lato;
+    }
+    #copyrights{
+        float: right;
+        font-family: lato;
+        font-size: 12px;
+        color: white;
+    }
+    #tombolregister{
+        margin-top: -10px;
     }
 </style>
 <!-- end css -->
@@ -53,8 +60,9 @@
                    <center><h1 id="header"><b id="wel">Wel</b>come</center><br>
                     <div class="login">
                         <h4 align="center" class="judul">Silahkan anda pilih</h4><br>
-                        <center><a href="{{ url('/login') }}" style="color: black;"><button class="form-control btn btn-default"> Login <i class="fa fa-sign-in" id="icon"></i> </button></a></center><br>
-                        <center><a href="{{ url('/register') }}" style="color: black;"><button class="form-control btn btn-primary">Register<i class="fa fa-user-plus" id="icon2"></i></button></a></center><br>
+                        <center><a href="{{ url('/login') }}"><button class="form-control btn btn-default"> Login <i class="fa fa-sign-in" id="icon"></i> </button></a></center><br>
+                        <center><a href="{{ url('/register') }}"><button id="tombolregister" class="form-control btn btn-primary">Register<i class="fa fa-user-plus" id="icon2"></i></button></a></center><br>
+                        <h4 id="copyrights">&copy;2017 Rpl_Smakgu</h4>
                     </div>
                 </div>
         <!--End form masuk atau daftar -->
