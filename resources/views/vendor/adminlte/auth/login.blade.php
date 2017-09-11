@@ -33,11 +33,11 @@
         <form action="{{ url('/login') }}" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="{{ trans('adminlte_lang::message.email') }}" name="email"/>
+                <input type="email" autocomplete="off" class="form-control" style="color: black" placeholder="{{ trans('adminlte_lang::message.email') }}" name="email"/>
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="{{ trans('adminlte_lang::message.password') }}" name="password"/>
+                <input type="password" class="form-control"  style="color: black" placeholder="{{ trans('adminlte_lang::message.password') }}" name="password"/>
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">
