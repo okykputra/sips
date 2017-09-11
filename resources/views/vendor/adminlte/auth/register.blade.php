@@ -6,11 +6,11 @@
 
 @section('content')
 
-<body class="hold-transition register-page">
+<body style="background-image: url( {{ asset('img/background.png') }} );">
     <div id="app">
         <div class="register-box">
             <div class="register-logo">
-                <a href="{{ url('/home') }}"><b>Admin</b>LTE</a>
+                <a href="{{ url('/') }}" style="text-decoration: none;"><center><h1 id="header"><b>Wel</b>come</center><br></a>
             </div>
 
             @if (count($errors) > 0)
@@ -24,8 +24,8 @@
                 </div>
             @endif
 
-            <div class="register-box-body">
-                <p class="login-box-msg">{{ trans('adminlte_lang::message.registermember') }}</p>
+            <div class="register-box-body" style="margin-top: -60px;background:rgba(0,0,0,0.1);">
+                <p class="login-box-msg" style="color:white;">Silahkan anda mendaftar</p>
                 <form action="{{ url('/register') }}" method="post">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="form-group has-feedback">
@@ -64,7 +64,7 @@
                         </div><!-- /.col -->
                     </div>
                 </form>
-                <a href="{{ url('/login') }}" class="text-center">{{ trans('adminlte_lang::message.membreship') }}</a>
+                <a style="color: white" href="{{ url('/login') }}" class="text-center">{{ trans('adminlte_lang::message.membreship') }}</a>
             </div><!-- /.form-box -->
         </div><!-- /.register-box -->
     </div>

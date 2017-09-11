@@ -27,12 +27,12 @@
         color: white;
     }
     #icon{
-        color: #2c3e50;
-        margin-left: 10px;
+        color: #7f8c8d;
+        margin-left: 15px;
     }
     #icon2{
         color: white;
-        margin-left: 10px;
+        margin-left: 5px;
     }
     #wel{
         color: #3498db;

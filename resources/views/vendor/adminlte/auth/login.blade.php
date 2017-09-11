@@ -9,7 +9,7 @@
     <div id="app">
         <div class="login-box">
             <div class="login-logo">
-                <center><h1 id="header"><b>Wel</b>come</center><br>
+                <a href="{{ url('/') }}" style="text-decoration: none;"><center><h1 id="header"><b>Wel</b>come</center><br></a>
             </div><!-- /.login-logo -->
 
         @if (count($errors) > 0)
@@ -23,7 +23,8 @@
             </div>
         @endif
 
-        <div class="login-box-body" style="background:rgba(0,0,0,0.1);">
+        <div class="login-box-body" style="background:rgba(0,0,0,0.1);margin-top: -60px">
+        <p class="login-box-msg" style="color:white;">Silahkan anda masuk</p>
         <form action="{{ url('/login') }}" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group has-feedback">
@@ -47,7 +48,7 @@
                 </div><!-- /.col -->
             </div>
         </form>
-        <a href="{{ url('/password/reset') }}">{{ trans('adminlte_lang::message.forgotpassword') }}</a><br>
+        <a style="color: white" href="{{ url('/password/reset') }}">{{ trans('adminlte_lang::message.forgotpassword') }}</a><br>
     </div><!-- /.login-box-body -->
 
     </div><!-- /.login-box -->
