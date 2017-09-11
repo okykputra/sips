@@ -74,7 +74,7 @@
                                 <a href="{{ url('/login') }}" style="text-decoration: none"><input type="submit" class="form-control btn btn-default" style="text-align: left" value="Login" /></a>
                         </div>
                         <div class="inner-addon right-addon" style="margin-top: 10px;color: white">
-                            <i class="glyphicon fa fa-plus"></i>
+                            <i class="glyphicon glyphicon-user"></i>
                                 <a href="{{ url('/register') }}" style="text-decoration: none"><input type="submit" class="btn btn-primary form-control" style="text-align: left;" value="Register" /></a>
                         </div><br>
                         <h4 id="copyrights">&copy;2017 Rpl_Smakgu</h4>
