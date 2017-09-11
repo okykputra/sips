@@ -16,7 +16,7 @@
     }
     #body{
         background-image: url( {{ asset('img/background.png') }} );
-        font-family: lato;
+        font-family: "lato" ,sans-serif;
         background-size:cover;
         background-repeat: no-repeat;
     }
@@ -27,14 +27,6 @@
     .judul{
         margin-top: -20px;
         color: white;
-    }
-    #icon{
-        color: #7f8c8d;
-        margin-left: 15px;
-    }
-    #icon2{
-        color: white;
-        margin-left: 5px;
     }
     #wel{
         color: #3498db;
@@ -47,9 +39,25 @@
         font-size: 12px;
         color: white;
     }
-    #tombolregister{
-        margin-top: -10px;
+    /* enable absolute positioning */
+    .inner-addon { 
+    position: relative; 
     }
+
+/* style icon */
+    .inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+    }
+    
+/* align icon */
+    .left-addon .glyphicon  { left:  0px;}
+    .right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+    .left-addon input  { padding-left:  30px; }
+    .right-addon input { padding-right: 30px; }
 </style>
 <!-- end css -->
 <body id="body"><br>
@@ -61,10 +69,22 @@
                 <div class="col-sm-4 col-sm-offset-4">
                    <center><h1 id="header"><b id="wel">Wel</b>come</center><br>
                     <div class="login">
+<<<<<<< HEAD
                         <h4 align="center" class="judul">Silahkan anda pilih</h4><br>
                         <center><a href="{{ url('/login') }}"><button class="form-control btn btn-default"> Login <i class="fa fa-sign-in" id="icon"></i> </button></a></center><br>
                         <center><a href="{{ url('/register') }}"><button id="tombolregister" class="form-control btn btn-primary">Register<i class="fa fa-user-plus" id="icon2"></i></button></a></center><br>
                         <h4 id="copyrights"><a href="#!">&copy;2017 Rpl_Smakgu</a></h4>
+=======
+                        <div class="inner-addon right-addon">
+                            <i class="glyphicon fa fa-sign-in"></i>
+                                <a href="{{ url('/login') }}" style="text-decoration: none"><input type="submit" class="form-control btn btn-default" style="text-align: left" value="Login" /></a>
+                        </div>
+                        <div class="inner-addon right-addon" style="margin-top: 10px;color: white">
+                            <i class="glyphicon fa fa-plus"></i>
+                                <a href="{{ url('/register') }}" style="text-decoration: none"><input type="submit" class="btn btn-primary form-control" style="text-align: left;" value="Register" /></a>
+                        </div><br>
+                        <h4 id="copyrights">&copy;2017 Rpl_Smakgu</h4>
+>>>>>>> 4a1a8b0440d208370316fcd9ea78733394f5edd5
                     </div>
                 </div>
         <!--End form masuk atau daftar -->
@@ -72,4 +92,3 @@
         @endif
 </body>
 </html>
-
