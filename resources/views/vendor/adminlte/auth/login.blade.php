@@ -35,7 +35,7 @@
 
         <div class="login-box-body" style="background:rgba(0,0,0,0.1);margin-top: -60px"><br>
         <div class="panel panel-info" id="panel">
-                              <div class="panel-heading"><i class="fa fa-exclamation-triangle"></i> Silahkan anda masuk , belum punya akun? <a href="{{ url('/register')}}" style="text-decoration: none">Register</a></div>
+                              <div class="panel-heading"><i class="fa fa-exclamation-triangle"></i> Silahkan anda masuk , belum punya akun? <a href="{{ url('/register')}}" style="text-decoration: none;">Register</a></div>
                             </div>
 
         <form action="{{ url('/login') }}" method="post">
