@@ -1,4 +1,12 @@
-@extends('adminlte::layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
+</head>
+<body>
+	@extends('adminlte::layouts.app')
 
 <title>Home</title>
 
@@ -46,3 +54,5 @@
             </div>
         </div></b>
 @stop
+</body>
+</html>
