@@ -22,6 +22,13 @@
         background-repeat: no-repeat;
         margin-top: 70px;
     }
+        #bodyy{
+        background-image: url( {{ asset('img/background.png') }} );
+        font-family: "lato" ,sans-serif;
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
+
     .login{
         padding: 50px;
         background:rgba(0,0,0,0.1);
@@ -65,11 +72,20 @@
     }
 </style>
 <!-- end css -->
-<body id="body">
+<body id="bodyy">
+    
+
     @if (Route::has('login'))
         @if (Auth::check())
-                <a href="{{ url('/home') }}">Home</a>
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        Anda sudah masuk !
+                    </div>
+                </div>
+                <center><a href=" {{ url('/home') }} " class="btn btn-primary" style="margin-top: 50px"><span class="glyphicon glyphicon-chevron-left"></span>Kembali</a></center>
         @else
+</body>
+<body id="body">
         <!-- Form masuk atau daftar -->
                 <div class="col-sm-4 col-sm-offset-4">
                    <center><h1 id="header"><b id="wel">Wel</b>come</center><br>
