@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
-	<title>Welcome</title>
-</head>
-<body class="body">
-	<!-- Content Header (Page header) -->
-<section class="content-header">
-    <h1>
+@extends('adminlte::layouts.app')
+
+<title>Data Siswa</title>
+
+@section('contentheader_title','Siswa')
+
+@section('main-content')
+<h1>
         <div class="panel panel-primary">
         	<div class="panel-heading">
         		<p style="font-family: lato;" align="center" >Selamat datang</p>
@@ -52,6 +48,4 @@
                  </div>
             </div>
         </div>
-</section>	
-</body>
-</html>
+@stop
