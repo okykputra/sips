@@ -37,9 +37,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <ul>
                 <li><a href="#" style="text-decoration: none; color: black;">RPL 2</a></li>
-              </ul>
             </div>
             <!-- /.box-body -->
           </div>
