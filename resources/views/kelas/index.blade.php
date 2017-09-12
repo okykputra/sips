@@ -3,8 +3,12 @@
 <title>Data Siswa</title>
 
 @section('contentheader_title','Siswa')
-
 @section('main-content')
+<div class="panel panel-primary" style="margin-top: -20px">
+          <div class="panel-heading">  
+            <p style="font-family: lato;font-size: 30px" align="center" >Data siswa</p>
+          </div>
+        </div>
         <div class="col-md-4">
           <div class="box box-warning box-solid">
             <div class="box-header with-border">
@@ -18,7 +22,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <li><a href="#" style="text-decoration: none; color: black;">RPL 2</a></li>
+              <ul style="list-style-type: none;"><a href="#" style="text-decoration: none; color: black;">RPL 2</a></ul>
             </div>
             <!-- /.box-body -->
           </div>
@@ -37,7 +41,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                <li><a href="#" style="text-decoration: none; color: black;">RPL 2</a></li>
+                <ul style="list-style-type: none;"><a href="#" style="text-decoration: none; color: black;">RPL 2</a></ul>
             </div>
             <!-- /.box-body -->
           </div>
@@ -56,7 +60,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <li><a href="#" style="text-decoration: none; color: black;">RPL 2</a></li>
+              <ul style="list-style-type: none;"><a href="#" style="text-decoration: none; color: black;">RPL 2</a></ul>
             </div>
             <!-- /.box-body -->
           </div>
