@@ -27,7 +27,7 @@ Route::get('/home', 'HomeController@index');
 
 Route::group(['middleware' => 'Admin'], function(){
         Route::get('Siswa', function () {
-        return view('kelas.index');
+            return view('kelas.index');
     });
 });
 Auth::routes();
