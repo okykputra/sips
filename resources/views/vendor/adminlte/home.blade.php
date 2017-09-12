@@ -8,7 +8,7 @@
 <body>
 	@extends('adminlte::layouts.app')
 
-<title>Home</title>
+<title>home</title>
 
 @section('main-content')
         <div class="panel panel-primary" style="margin-top: -30px">
