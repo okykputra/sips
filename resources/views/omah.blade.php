@@ -85,7 +85,7 @@
                             <i class="glyphicon glyphicon-user"></i>
                                 <a href="{{ url('/register') }}" style="text-decoration: none"><input type="submit" class="btn btn-primary form-control" title="daftar" style="text-align: left;font-family: sans-serif;" value="Register" /></a>
                         </div><br>
-                        <h4 id="copyrights"><a href="www.smkn1dlanggu.sch.id/websmk/page/detail/rekayasa-perangkat-lunak" style="text-decoration: none; color: white;">&copy;2017 Rpl_Smakgu</a></h4>
+                        <h4 id="copyrights"><a href="#!" style="text-decoration: none; color: white;">&copy;2017 Rpl_Smakgu</a></h4>
                     </div>
                 </div>
         <!--End form masuk atau daftar -->
