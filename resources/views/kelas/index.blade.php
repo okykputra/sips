@@ -1,6 +1,6 @@
 @extends('adminlte::layouts.app')
 
-<title>Data Siswa</title>
+<title>Data siswa</title>
 
 @section('contentheader_title','Siswa')
 @section('main-content')
