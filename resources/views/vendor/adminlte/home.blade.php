@@ -13,7 +13,7 @@
 @section('main-content')
         <div class="panel panel-primary" style="margin-top: -30px">
         	<div class="panel-heading">  
-        		<p style="font-family: lato;font-size: 30px" align="center" >Selamat datang</p>
+        		<p style="font-family: lato ;font-size: 30px" align="center" >Selamat datang</p>
         	</div>
         </div>
         <small>@yield('')</small>
