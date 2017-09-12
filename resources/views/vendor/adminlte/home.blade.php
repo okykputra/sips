@@ -1,9 +1,17 @@
-@extends('adminlte::layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
+</head>
+<body>
+	@extends('adminlte::layouts.app')
 
 <title>Home</title>
 
 @section('main-content')
-        <div class="panel panel-primary" style="margin-top: -20px">
+        <div class="panel panel-primary" style="margin-top: -30px">
         	<div class="panel-heading">  
         		<p style="font-family: lato ;font-size: 30px" align="center" >Selamat datang</p>
         	</div>
@@ -46,3 +54,5 @@
             </div>
         </div></b>
 @stop
+</body>
+</html>
