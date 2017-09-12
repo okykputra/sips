@@ -21,7 +21,7 @@
         	<b><div class="row">
         		<div class="col-md-4">
         			<blockquote  style="font-family: lato">
-        				Selamat datang <b style="color:#3498db">admin !</b> <br> di halaman ini anda akan di mudahkan untuk :<br>
+        				Selamat datang <b style="color:#3498db">admin </b> <br> di halaman ini anda akan di mudahkan untuk :<br>
         				<ul style="margin-top: 10px;">
         					<li style="font-family: lato">Melihat data siswa</li>	
         					<li style="font-family: lato">Melihat data pelanggaran</li>
