@@ -2,11 +2,11 @@
 <header class="main-header">
 
     <!-- Logo -->
-    <a href="{{ url('/home') }}" class="logo">
+    <a href="{{ url('/home') }}" class="logo" style="text-decoration: none;">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>A</b>dm</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Halaman</b>Admin</span>
+        <span ><b>Halaman</b>Admin</span>
     </a>
 
     <!-- Header Navbar -->
