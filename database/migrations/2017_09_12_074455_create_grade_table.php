@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateKelasTable extends Migration
+class CreateGradeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateKelasTable extends Migration
      */
     public function up()
     {
-        Schema::create('kelas', function (Blueprint $table) {
+        Schema::create('grade', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('kelas');
-            $table->string('jurusan');
+            $table->integer('grade');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -29,6 +27,6 @@ class CreateKelasTable extends Migration
      */
     public function down()
     {
-        Schema::drop('kelas');
+        Schema::drop('grade');
     }
 }
