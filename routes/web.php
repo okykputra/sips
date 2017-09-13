@@ -29,5 +29,6 @@ Route::group(['middleware' => 'Admin'], function(){
         Route::get('Siswa', function () {
             return view('kelas.index');
     });
+        Route::get('kelas', 'SiswaController@kelas');
 });
 Auth::routes();
