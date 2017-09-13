@@ -29,5 +29,12 @@ Route::group(['middleware' => 'Admin'], function(){
         Route::get('Siswa', function () {
             return view('kelas.index');
     });
+        Route::get('pelanggaran/index','PelanggaranController@create');
+        Route::post('pelanggaran','PelanggaranController@store');
+        // Route::post('pelanggaran/view','PelanggaranController')
+// Route::get('pelanggaran.index',function (){
+// 	return view('pelanggaran.index');
+//  });
+
 });
 Auth::routes();
