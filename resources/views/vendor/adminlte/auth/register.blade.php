@@ -3,13 +3,13 @@
 <title>Register</title>
 
 @section('content')
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=lato">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=nexa">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=hero">
 <style>
     #wel{
         color:  #3498db;
-        font-family: hero light;
+        font-family: "Lato" ,sans-serif;
     }
 
 </style>
@@ -18,7 +18,7 @@
     <div id="app">
         <div class="register-box">
             <div class="register-logo">
-                <a href="{{ url('/') }}" title="home" style="text-decoration: none; "><center><h1 style="color: #2c3e50;font-family: nexa"><b id="wel">Regis</b>ter</center><br></a>
+                <a href="{{ url('/') }}" title="home" style="text-decoration: none; "><center><h1><b id="wel">Register</b></center><br></a>
             </div>
 
             @if (count($errors) > 0)
@@ -39,15 +39,15 @@
                 <form action="{{ url('/register') }}" method="post">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="form-group has-feedback">
-                        <input type="text" class="form-control" style="color: black" placeholder="{{ trans('adminlte_lang::message.fullname') }}" name="name" value="{{ old('name') }}"/>
+                        <input autocomplete="off" type="text" class="form-control" style="color: black" placeholder="{{ trans('adminlte_lang::message.fullname') }}" name="name" value="{{ old('name') }}"/>
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">
-                        <input type="email" class="form-control" style="color: black" placeholder="{{ trans('adminlte_lang::message.email') }}" name="email" value="{{ old('email') }}"/>
+                        <input autocomplete="off" type="email" class="form-control" style="color: black" placeholder="{{ trans('adminlte_lang::message.email') }}" name="email" value="{{ old('email') }}"/>
                         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">
-                        <input type="password" class="form-control" placeholder="{{ trans('adminlte_lang::message.password') }}" name="password"/>
+                        <input autocomplete="off" type="password" class="form-control" placeholder="{{ trans('adminlte_lang::message.password') }}" name="password"/>
                         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">

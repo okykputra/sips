@@ -1,6 +1,6 @@
 @extends('adminlte::layouts.app')
 
-@section('htmlheader_title','tambah Data')
+<title>Tambah Data</title>
 
 @section('contentheader_title','Tambah Data')
 
@@ -13,13 +13,26 @@
             <div class="panel-body">
                 <form action="{{url('siswa/create')}}" method="post">
                     <div class="form-group">
-                        <input type="text" name="nama" class="form-control" placeholder="Nama Siswa">
+                        <input type="text" name="nama_siswa" class="form-control" placeholder="Nama Siswa">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="kelas" class="form-control" placeholder="Kelas">
+                        <select name="kelas_id">
+                        @foreach($grade as $list)
+                            <option value="{{ $list->id }}">{{ $list->kelas }} {{ $list->jurusan }}</option>
+                        @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="plat" class="form-control" placeholder="Nomer Kendaraan">
+                        <select name="jenis_kelamin">
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="alamat" class="form-control" placeholder="Alamat">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="nomer_telpon" class="form-control" placeholder="Nomer Telepon">
                     </div>
                     <div class="form-group">
 						<input type="hidden" class="form-control" name="_token" value="{{ csrf_token() }}">							

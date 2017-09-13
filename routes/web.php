@@ -23,9 +23,9 @@ Route::group(['middleware' => 'auth'], function () {
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes
 });
-Route::get('/home', 'HomeController@index');
 
 Route::group(['middleware' => 'Admin'], function(){
+<<<<<<< HEAD
         Route::get('Siswa', function () {
             return view('kelas.index');
     });
@@ -36,5 +36,17 @@ Route::group(['middleware' => 'Admin'], function(){
 // 	return view('pelanggaran.index');
 //  });
 
+=======
+    Route::get('/siswa', 'SiswaController@index');
+    Route::get('/data/{id}', 'SiswaController@tampil');
+    Route::get('/Tambah', 'SiswaController@kelas');
+    Route::post('siswa/create', 'SiswaController@tambah');
+    Route::get('/kelas', 'SiswaController@data_kelas');
+    Route::get('/Add', 'SiswaController@add');
+    Route::post('kelas/create', 'SiswaController@store');
+    Route::delete('/delete/{id}', 'SiswaController@destroy');
+    Route::get('/edit/{id}', 'SiswaController@edit');
+    Route::put('update/{id}', 'SiswaController@update');
+>>>>>>> 986e15721754ee2ce0b9c8f2a4c91c308b7cb7c5
 });
 Auth::routes();
