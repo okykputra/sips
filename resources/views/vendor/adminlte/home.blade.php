@@ -23,8 +23,8 @@
         			<blockquote  style="font-family: lato">
         				Selamat datang <b style="color:#3498db">admin </b> <br> di halaman ini anda akan di mudahkan untuk :<br>
         				<ul style="margin-top: 10px;">
-        					<li style="font-family: lato">Melihat data siswa</li>	
-        					<li style="font-family: lato">Melihat data pelanggaran</li>
+        					<li style="font-family: Lato">Melihat data siswa</li>	
+        					<li style="font-family: Lato">Melihat data pelanggaran</li>
         					<li style="font-family: lato">Tambah data siswa / hapus data</li>
         					<li style="font-family: lato">Menambah data pelanggaran baru / hapus data</li>
         					<li style="font-family: lato">Melihat catatan pelanggaran</li>

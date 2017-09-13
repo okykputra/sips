@@ -3,13 +3,13 @@
 <title>Register</title>
 
 @section('content')
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=lato">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=nexa">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=hero">
 <style>
     #wel{
         color:  #3498db;
-        font-family: hero light;
+        font-family: "Lato" ,sans-serif;
     }
 
 </style>
@@ -18,7 +18,7 @@
     <div id="app">
         <div class="register-box">
             <div class="register-logo">
-                <a href="{{ url('/') }}" title="home" style="text-decoration: none; "><center><h1 style="color: #2c3e50;font-family: nexa"><b id="wel">Regis</b>ter</center><br></a>
+                <a href="{{ url('/') }}" title="home" style="text-decoration: none; "><center><h1><b id="wel">Register</b></center><br></a>
             </div>
 
             @if (count($errors) > 0)
