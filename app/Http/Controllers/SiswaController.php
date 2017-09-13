@@ -10,6 +10,7 @@ class SiswaController extends Controller
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function index()
     {
         $kelas = DB::table('kelas')->get();
@@ -38,6 +39,8 @@ class SiswaController extends Controller
 =======
 =======
 >>>>>>> e043141623df6d261b35b39164272e30efc8c951
+=======
+>>>>>>> e043141623df6d261b35b39164272e30efc8c951
     public function kelas()
     {
     	$kelas = DB::table('kelas')
@@ -59,6 +62,9 @@ class SiswaController extends Controller
     	]);
     	return redirect('kelas');
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> e043141623df6d261b35b39164272e30efc8c951
+=======
 >>>>>>> e043141623df6d261b35b39164272e30efc8c951
 =======
 >>>>>>> e043141623df6d261b35b39164272e30efc8c951

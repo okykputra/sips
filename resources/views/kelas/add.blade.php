@@ -24,6 +24,19 @@
 </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+@stop
+
+@section('Scripts')
+        <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#table').DataTable();
+            });
+        </script>
+@stop
+>>>>>>> e043141623df6d261b35b39164272e30efc8c951
+=======
 @stop
 
 @section('Scripts')

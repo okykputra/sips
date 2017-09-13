@@ -41,6 +41,9 @@
             <li><a href="{{url('Siswa')}}"><i class='fa fa-link'></i> <span>Data Siswa</span></a></li>
             <li><a href="{{url('kelas')}}"><i class='fa fa-link'></i> <span>Data Kelas</span></a></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> e043141623df6d261b35b39164272e30efc8c951
+=======
 >>>>>>> e043141623df6d261b35b39164272e30efc8c951
 =======
 >>>>>>> e043141623df6d261b35b39164272e30efc8c951
