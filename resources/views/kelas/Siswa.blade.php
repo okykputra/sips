@@ -32,7 +32,7 @@
                     <td><form method="post" action="#">
                             {{csrf_field()}}
                             <input type="hidden" name="_method" value="delete">
-                            <button class="btn btn-danger pull-left btn-block" onclick="alert('Apakah anda yakin Ingin Menghapus Data Ini ?');">
+                            <button class="btn btn-danger pull-left btn-block" >
                                <span class="glyphicon glyphicon-trash"> Delete</span>
                             </button>
                         </form>

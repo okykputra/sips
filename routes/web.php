@@ -27,22 +27,13 @@ Route::group(['middleware' => 'auth'], function () {
 Route::group(['middleware' => 'Admin'], function(){
     Route::get('/siswa', 'SiswaController@index');
     Route::get('/data/{id}', 'SiswaController@tampil');
-    Route::get('tambah', function () {
-        return view('siswa.tambah');
-    });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    Route::get('/tambah', 'SiswaController@kelas');
+    Route::get('/Tambah', 'SiswaController@kelas');
     Route::post('siswa/create', 'SiswaController@tambah');
-=======
-        Route::get('kelas', 'SiswaController@kelas');
->>>>>>> e043141623df6d261b35b39164272e30efc8c951
-=======
-        Route::get('kelas', 'SiswaController@kelas');
->>>>>>> e043141623df6d261b35b39164272e30efc8c951
-=======
-        Route::get('kelas', 'SiswaController@kelas');
->>>>>>> e043141623df6d261b35b39164272e30efc8c951
+    Route::get('/kelas', 'SiswaController@data_kelas');
+    Route::get('/Add', 'SiswaController@add');
+    Route::post('kelas/create', 'SiswaController@store');
+    Route::delete('/delete/{id}', 'SiswaController@destroy');
+    Route::get('/edit/{id}', 'SiswaController@edit');
+    Route::put('update/{id}', 'SiswaController@update');
 });
 Auth::routes();

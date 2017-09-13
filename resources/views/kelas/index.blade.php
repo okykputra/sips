@@ -29,7 +29,7 @@
                     <td>{{ $no++ }}</td>
                     <td>{{ $list->kelas }}</td>
                     <td>{{ $list->jurusan }}</td>
-                    <td><a class="btn btn-primary" href="/data/{{ $list->id }}"><span class="glyphicon glyphicon-folder-open"> Data Siswa</span></a></td>
+                    <td><a class="btn alert-info" href="/data/{{ $list->id }}"><i class="glyphicon glyphicon-folder-open"></i><span style="padding-left: 10px;">Data siswa</span></a></td>
                 </tr>
             @endforeach        
         </tbody>

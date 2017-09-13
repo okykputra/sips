@@ -17,7 +17,7 @@
                     </div>
                     <div class="form-group">
                         <select name="kelas_id">
-                        @foreach($kelas as $list)
+                        @foreach($grade as $list)
                             <option value="{{ $list->id }}">{{ $list->kelas }} {{ $list->jurusan }}</option>
                         @endforeach
                         </select>

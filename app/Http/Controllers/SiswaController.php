@@ -2,30 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use DB;
 use Illuminate\Http\Request;
 use DB;
 
 class SiswaController extends Controller
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function index()
     {
         $kelas = DB::table('kelas')->get();
         return view('kelas.index',['kelas'=>$kelas]);
     }
+
     public function tampil($id)
     {
         $siswa = DB::table('kelas')->join('siswa','siswa.kelas_id','=','kelas.id')->where('siswa.kelas_id',$id)->get();
         return view('kelas.siswa',['siswa'=>$siswa]);
     }
+
     public function kelas()
     {
-        $kelas = DB::table('kelas')->get();
-        return view('siswa.tambah',['kelas'=>$kelas]);
+        $grade = DB::table('kelas')->get();
+        return view('siswa.tambah',['grade'=>$grade]);
     }
+
     public function tambah(Request $request)
     {
         $siswa = DB::table('siswa')->insert([
@@ -36,37 +35,49 @@ class SiswaController extends Controller
 		       	'nomer_telpon'               => $request->nomer_telpon
         ]);
         return redirect('/siswa')->with('message','Data Siswa Berhasil di Tambahkan');
-=======
-=======
->>>>>>> e043141623df6d261b35b39164272e30efc8c951
-=======
->>>>>>> e043141623df6d261b35b39164272e30efc8c951
-    public function kelas()
+    }
+
+    public function data_kelas()
     {
-    	$kelas = DB::table('kelas')
-                ->orderBy('kelas.id','DESC')
-                ->get();
+       	$kelas = DB::table('kelas')
+                    ->orderBy('kelas.id','ASC')
+                    ->get();
         return view('kelas.kelas',['kelas'=>$kelas]);
     }
 
     public function add()
     {
-    	return view('kelas.add');
+       	return view('kelas.add');
     }
 
     public function store(Request $request)
     {
-    	$kelas = DB::table('kelas')->insert([
-    	'kelas' =>$request->kelas,
-    	'jurusan' =>$request->jurusan
-    	]);
-    	return redirect('kelas');
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e043141623df6d261b35b39164272e30efc8c951
-=======
->>>>>>> e043141623df6d261b35b39164272e30efc8c951
-=======
->>>>>>> e043141623df6d261b35b39164272e30efc8c951
+       	$kelas = DB::table('kelas')->insert([
+       	'kelas' =>$request->kelas,
+      	'jurusan' =>$request->jurusan 
+        	]);
+      	return redirect('kelas');
+    }
+
+    public function destroy($id)
+    {
+        $delete = DB::table('kelas')->where('id',$id)->delete();
+        return redirect()->back();
+    }
+
+    public function edit($id)
+    {
+        $kelas = DB::table('kelas')->where('id',$id)->first();
+        return view('kelas.edit', ['kelas'=>$kelas]);
+    }
+
+    public function update(Request $request,$id)
+    {
+        $kelas = DB::table('kelas')->where('id',$id)
+                    ->update([
+                        'kelas'       => $request->kelas,
+                        'jurusan'     => $request->jurusan
+                    ]);
+        return redirect('kelas');
     }
 }
