@@ -30,19 +30,8 @@ Route::group(['middleware' => 'Admin'], function(){
     Route::get('tambah', function () {
         return view('siswa.tambah');
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     Route::get('/tambah', 'SiswaController@kelas');
     Route::post('siswa/create', 'SiswaController@tambah');
-=======
-        Route::get('kelas', 'SiswaController@kelas');
->>>>>>> e043141623df6d261b35b39164272e30efc8c951
-=======
-        Route::get('kelas', 'SiswaController@kelas');
->>>>>>> e043141623df6d261b35b39164272e30efc8c951
-=======
-        Route::get('kelas', 'SiswaController@kelas');
->>>>>>> e043141623df6d261b35b39164272e30efc8c951
+    Route::get('kelas', 'SiswaController@kelas');
 });
 Auth::routes();
