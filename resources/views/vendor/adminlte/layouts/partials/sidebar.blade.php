@@ -34,19 +34,13 @@
             
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
-<<<<<<< HEAD
-            <li><a href="{{url('Siswa')}}"><i class='fa fa-link'></i> <span>Data Siswa</span></a></li>
-            <li><a href="{{url('pelanggaran/view')}}"><i class='fa fa-link'></i> <span>Data Pelanggaran</span></a></li>
-=======
             <li><a href="{{url('/siswa')}}"><i class='fa fa-link'></i> <span>Data Siswa</span></a></li>
+            <li><a href="{{url('pelanggaran/view')}}"><i class='fa fa-link'></i> <span>Data Pelanggaran</span></a></li>
             <li><a href="{{url('kelas')}}"><i class='fa fa-link'></i> <span>Data Kelas</span></a></li>
-            <li><a href="#"><i class='fa fa-link'></i> <span>Data Pelanggaran</span></a></li>
->>>>>>> 986e15721754ee2ce0b9c8f2a4c91c308b7cb7c5
             <li class="treeview">
                 <a href="#"><i class='fa fa-link'></i> <span>Opsi Siswa</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{url('/Tambah') }}">Tambah Data</a></li>
-                    <li><a href="#">Edit Data</a></li>
                 </ul>
             </li>
             <li class="treeview">
