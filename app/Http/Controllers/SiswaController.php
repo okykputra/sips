@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use DB;
+
 use Illuminate\Http\Request;
 use DB;
 
 class SiswaController extends Controller
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function index()
     {
         $kelas = DB::table('kelas')->get();
@@ -36,12 +33,8 @@ class SiswaController extends Controller
 		       	'nomer_telpon'               => $request->nomer_telpon
         ]);
         return redirect('/siswa')->with('message','Data Siswa Berhasil di Tambahkan');
-=======
-=======
->>>>>>> e043141623df6d261b35b39164272e30efc8c951
-=======
->>>>>>> e043141623df6d261b35b39164272e30efc8c951
-    public function kelas()
+    }
+    public function data_kelas()
     {
     	$kelas = DB::table('kelas')
                 ->orderBy('kelas.id','DESC')
@@ -61,12 +54,5 @@ class SiswaController extends Controller
     	'jurusan' =>$request->jurusan
     	]);
     	return redirect('kelas');
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e043141623df6d261b35b39164272e30efc8c951
-=======
->>>>>>> e043141623df6d261b35b39164272e30efc8c951
-=======
->>>>>>> e043141623df6d261b35b39164272e30efc8c951
     }
 }

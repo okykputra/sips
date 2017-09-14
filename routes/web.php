@@ -32,6 +32,6 @@ Route::group(['middleware' => 'Admin'], function(){
     });
     Route::get('/tambah', 'SiswaController@kelas');
     Route::post('siswa/create', 'SiswaController@tambah');
-    Route::get('kelas', 'SiswaController@kelas');
+    Route::get('kelas', 'SiswaController@data_kelas');
 });
 Auth::routes();
