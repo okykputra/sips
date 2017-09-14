@@ -80,4 +80,31 @@ class SiswaController extends Controller
                     ]);
         return redirect('kelas');
     }
+
+    public function ubah($id)
+    {
+        $siswa = DB::table('siswa')->where('id',$id)->first();
+        $kelas = DB::table('kelas')->orderBy('kelas','ASC')->get();
+        return view('siswa.edit', ['siswa' => $siswa , 'kelas' => $kelas]);
+    }
+
+    public function ganti(Request $request,$id)
+    {
+        $siswa = DB::table('siswa')->where('id',$id)
+                ->update([
+                    'nama_siswa' 		  	     => $request->nama_siswa,
+		       	    'kelas_id'   			     => $request->kelas_id,
+                    'jenis_kelamin'   			     => $request->jenis_kelamin,
+                    'alamat'                     => $request->alamat,
+                    'nomer_telpon'               => $request->nomer_telpon
+                ]);
+        return redirect('siswa')->with('message','Data Berhasil di Update');             
+    }
+
+    public function hapus($id)
+    {
+         $hapus = DB::table('siswa')->where('id', '=', $id)->delete();
+         return redirect()->back()->with('message','Data Berhasil di Hapus');;
+    }
+
 }

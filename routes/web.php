@@ -38,5 +38,10 @@ Route::group(['middleware' => 'Admin'], function(){
         Route::delete('/delete/{id}', 'SiswaController@destroy');
         Route::get('/edit/{id}', 'SiswaController@edit');
         Route::put('update/{id}', 'SiswaController@update');
+        Route::get('/ubah/{id}', 'SiswaController@ubah');
+        Route::put('/ubah/ganti/{id}', 'SiswaController@ganti');
+        Route::delete('/data/{id}', 'SiswaController@hapus');
+        
+        
 });
 Auth::routes();

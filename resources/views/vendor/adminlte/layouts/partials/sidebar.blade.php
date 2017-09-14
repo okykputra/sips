@@ -41,7 +41,6 @@
                 <a href="#"><i class='fa fa-link'></i> <span>Opsi Siswa</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{url('/Tambah') }}">Tambah Data</a></li>
-                    <li><a href="#">Edit Data</a></li>
                 </ul>
             </li>
             <li class="treeview">

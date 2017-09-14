@@ -23,10 +23,10 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <select name="jenis_kelamin">
-                            <option value="Laki-laki">Laki-laki</option>
-                            <option value="Perempuan">Perempuan</option>
-                        </select>
+                            <input type="radio" name="jenis_kelamin" id="optionsRadios1" value="laki-laki" checked>
+                            Laki-laki
+                            <input type="radio" name="jenis_kelamin" id="optionsRadios2" value="perempuan" checked>
+                            Perempuan
                     </div>
                     <div class="form-group">
                         <input type="text" name="alamat" class="form-control" placeholder="Alamat">

@@ -5,6 +5,12 @@
 @section('contentheader_title','Siswa')
 
 @section('main-content')
+@if(Session::has('message'))
+    <div class="alert alert-info fade in">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close" data-duration="1s">&times;</a>
+			{{Session::get('message')}}
+	</div>
+@endif
 <link rel="stylesheet" type="text/css" href="{{URL::asset('css/dataTables.min.css')}}">
     <div class="container">
         <table class="table table-striped table-hover table-responsive" id="table" style="text-align: center;">
@@ -13,6 +19,7 @@
                 <th style="text-align: center;">No</th>
                 <th style="text-align: center;">Nama</th>
                 <th style="text-align: center;">Kelas</th>
+                <th style="text-align: center;">Jenis Kelamin</th>
                 <th style="text-align: center;">jurusan</th>
                 <th style="text-align: center;">Alamat</th>
                 <th style="text-align: center;">No Telpon</th>
@@ -26,17 +33,18 @@
                     <td>{{ $no++ }}</td>
                     <td>{{ $list->nama_siswa }}</td>
                     <td>{{ $list->kelas }}</td>
+                    <td>{{ $list->jenis_kelamin }}</td>
                     <td>{{ $list->jurusan }}</td>
                     <td>{{ $list->alamat }}</td>
                     <td>{{ $list->nomer_telpon }}</td>
-                    <td><form method="post" action="#">
+                    <td><form method="post" action="/data/{{ $list->id }}">
                             {{csrf_field()}}
                             <input type="hidden" name="_method" value="delete">
-                            <button class="btn btn-danger pull-left btn-block" >
+                            <button class="btn btn-danger pull-left btn-block" onclick="return konfirmasi()">
                                <span class="glyphicon glyphicon-trash"> Delete</span>
                             </button>
                         </form>
-                        <a class="btn btn-warning pull-left btn-block" href="#"><span class="glyphicon glyphicon-pencil"> Edit</span></a></td>
+                        <a class="btn btn-warning pull-left btn-block" href="/ubah/{{ $list->id }}"><span class="glyphicon glyphicon-pencil"> Edit</span></a></td>
                 </tr>
             @endforeach        
         </tbody>
@@ -49,5 +57,13 @@
             $(function() {
                 $('#table').DataTable();
             });
+        </script>
+        <script type="text/javascript" language="JavaScript">
+            function konfirmasi()
+                {
+                    tanya = confirm("Apakah Anda Yakin Akan Menghapus Data Ini ?");
+                    if (tanya == true) return true;
+                    else return false;
+                }
         </script>
 @stop
