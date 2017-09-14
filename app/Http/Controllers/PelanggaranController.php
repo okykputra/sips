@@ -9,7 +9,7 @@ class PelanggaranController extends Controller
 {
 public function create()
 {
-     return view('pelanggaran/index');
+     return view('pelanggaran.index');
 }
 
 public function store(Request $request)
@@ -18,8 +18,6 @@ public function store(Request $request)
 		$pelanggaran->pelanggaran = $request->pelanggaran;
 		$pelanggaran->poin = $request->poin;
         $pelanggaran->save();
-       
-		// dd($pelanggaran);
-       return redirect('pelanggaran/index');
+       return redirect('pelanggaran.index');
     }
 }
