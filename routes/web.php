@@ -27,7 +27,12 @@ Route::group(['middleware' => 'auth'], function () {
 Route::group(['middleware' => 'Admin'], function(){
 Route::get('pelanggaran/index','PelanggaranController@create');
 Route::post('pelanggaran','PelanggaranController@store');
-Route::get('pelanggaran/view','PelanggaranController@create');
+Route::get('pelanggaran/view','PelanggaranController@index');
+Route::get('pelanggaran/edit/{id}', 'PelanggaranController@edit');
+Route::put('pelanggaran/{id}','PelanggaranController@update');
+Route::delete('pelanggaran/{id}','PelanggaranController@destroy');
+
+
 Route::get('/siswa', 'SiswaController@index');
 Route::get('/data/{id}', 'SiswaController@tampil');
 Route::get('/Tambah', 'SiswaController@kelas');
