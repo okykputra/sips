@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 @extends('adminlte::layouts.app')
 
 <title>Data Pelanggaran</title>
@@ -51,3 +53,4 @@
             });
         </script>
 @stop
+>>>>>>> 45801b033210111a42f42d148a32aa014fb0d797

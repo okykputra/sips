@@ -40,11 +40,11 @@
                     <td><form method="post" action="/data/{{ $list->id }}">
                             {{csrf_field()}}
                             <input type="hidden" name="_method" value="delete">
-                            <button class="btn btn-danger pull-left btn-block" onclick="return konfirmasi()">
-                               <span class="glyphicon glyphicon-trash"> Delete</span>
+                            <button class="btn alert-danger" data-toggle="tooltip" title="hapus" onclick="return konfirmasi()">
+                               <span class="glyphicon glyphicon-trash"></span>
                             </button>
                         </form>
-                        <a class="btn btn-warning pull-left btn-block" href="/ubah/{{ $list->id }}"><span class="glyphicon glyphicon-pencil"> Edit</span></a></td>
+                        <a style="margin-top: -10px" class="btn alert-info " href="/ubah/{{ $list->id }}"><span data-toggle="tooltip" title="edit" class="glyphicon glyphicon-pencil"> </span></a></td>
                 </tr>
             @endforeach        
         </tbody>
