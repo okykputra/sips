@@ -25,13 +25,24 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::group(['middleware' => 'Admin'], function(){
+    Route::get('pelanggaran/index','PelanggaranController@create');
+    Route::post('pelanggaran','PelanggaranController@store');
+    Route::get('pelanggaran/view','PelanggaranController@index');
+    Route::get('pelanggaran/edit/{id}', 'PelanggaranController@edit');
+    Route::put('pelanggaran/{id}','PelanggaranController@update');
+    Route::delete('pelanggaran/{id}','PelanggaranController@destroy');
     Route::get('/siswa', 'SiswaController@index');
     Route::get('/data/{id}', 'SiswaController@tampil');
-    Route::get('tambah', function () {
-        return view('siswa.tambah');
-    });
-    Route::get('/tambah', 'SiswaController@kelas');
+    Route::get('/Tambah', 'SiswaController@kelas');
     Route::post('siswa/create', 'SiswaController@tambah');
-    Route::get('kelas', 'SiswaController@data_kelas');
+    Route::get('/kelas', 'SiswaController@data_kelas');
+    Route::get('/Add', 'SiswaController@add');
+    Route::post('kelas/create', 'SiswaController@store');
+    Route::delete('/delete/{id}', 'SiswaController@destroy');
+    Route::get('/edit/{id}', 'SiswaController@edit');
+    Route::put('update/{id}', 'SiswaController@update');
+    Route::get('/ubah/{id}', 'SiswaController@ubah');
+    Route::put('/ubah/ganti/{id}', 'SiswaController@ganti');
+    Route::delete('/data/{id}', 'SiswaController@hapus');
 });
 Auth::routes();
