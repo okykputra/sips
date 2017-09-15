@@ -36,7 +36,6 @@ class SiswaController extends Controller
         ]);
         return redirect('/siswa')->with('message','Data Siswa Berhasil di Tambahkan');
     }
-
     public function data_kelas()
     {
        	$kelas = DB::table('kelas')
