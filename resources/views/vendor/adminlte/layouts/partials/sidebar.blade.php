@@ -34,10 +34,10 @@
             
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
+            @if(Auth::user()->is_admin == 1)
             <li><a href="{{url('/siswa')}}"><i class='fa fa-link'></i> <span>Data Siswa</span></a></li>
             <li><a href="{{url('pelanggaran/view')}}"><i class='fa fa-link'></i> <span>Data Pelanggaran</span></a></li>
             <li><a href="{{url('kelas')}}"><i class='fa fa-link'></i> <span>Data Kelas</span></a></li>
-            @if(Auth::user()->is_admin == 1)
             <li class="treeview">
                 <a href="#"><i class='fa fa-link'></i> <span>Opsi Siswa</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
@@ -48,12 +48,11 @@
                 <a href="#"><i class='fa fa-link'></i> <span>Opsi Pelanggaran</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{url('pelanggaran/index')}}">Tambah Data</a></li>
-                    <li><a href="#">Edit Data</a></li>
                 </ul>
             </li>
             <li><a href="#"><i class='fa fa-link'></i> <span>Catatan Pelanggaran</span></a></li>
             @else
-            <li><a href="{{url('kelas')}}"><i class='fa fa-link'></i> <span>Data Kelas</span></a></li>
+            <li><a href="#"><i class='fa fa-link'></i> <span>Catat Pelanggar</span></a></li>
             @endif
 
         </ul><!-- /.sidebar-menu -->
