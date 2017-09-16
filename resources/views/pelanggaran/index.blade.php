@@ -12,13 +12,13 @@
 </div>
 
   <form action="{{ url('/pelanggaran') }}" method="post">
-    <div class="form-group">
+    <div class=>
       <label style="font-family: lato">Pelanggaran:</label>
-      <input style="color: black" type="text" class="form-control" placeholder="Tulis pelanggaran..." name="pelanggaran" required autofocus>
+      <input style="color: black" type="text" class="form-control" placeholder="Tulis pelanggaran..." name="pelanggaran">
     </div>
     <div class="form-group">
       <label style="font-family: lato">Poin pelanggaran:</label>
-      <input style="color: black" type="text" class="form-control" id="pwd" placeholder="Tulis poin..." name="poin" required>
+      <input style="color: black" type="text" class="form-control" id="pwd" placeholder="Tulis poin..." name="poin"  data-toggle="tooltip" title="harap">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
     </div>
     	 <button type="submit" class="btn alert-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="tambah">
