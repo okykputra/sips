@@ -17,7 +17,6 @@ class CreateSiswaTable extends Migration
             $table->increments('id');
             $table->string('nama_siswa');
             $table->integer('kelas_id');
-            $table->string('absen');
             $table->string('jenis_kelamin');
             $table->text('alamat');
             $table->string('nomer_telpon');

@@ -61,7 +61,8 @@
                 </div><!-- /.col -->
             </div>
         </form>
-        <a style="color: white" href="{{ url('/password/reset') }}">{{ trans('adminlte_lang::message.forgotpassword') }}</a><br>
+        <!-- <a style="color: white" href="{{ url('/password/reset') }}">{{ trans('adminlte_lang::message.forgotpassword') }}</a><br> -->
+        
     </div><!-- /.login-box-body -->
 
     </div><!-- /.login-box -->

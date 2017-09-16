@@ -12,6 +12,10 @@
 */
 
 Route::get('/', function () {
+    if(Auth::check())
+    {
+        return redirect('/home');
+    }
     return view('omah');
 });
 
@@ -44,5 +48,6 @@ Route::group(['middleware' => 'Admin'], function(){
     Route::get('/ubah/{id}', 'SiswaController@ubah');
     Route::put('/ubah/ganti/{id}', 'SiswaController@ganti');
     Route::delete('/data/{id}', 'SiswaController@hapus');
+    Route::get('/catatan', 'SiswaController@catatan');
 });
 Auth::routes();
