@@ -27,7 +27,7 @@
                 <input style="color: black" autocomplete="off" type="text" class="form-control" placeholder="Tulis pelanggaran..." name="pelanggaran" data-toggle="tooltip" title="harap isi bidang ini">
               </div>
           <div class="form-group">
-            <label style="font-family: lato">Poin pelanggaran:</label>
+            <label style="font-family: lato">Poin:</label>
             <input style="color: black" type="text" autocomplete="off" class="form-control" id="pwd" placeholder="Tulis poin..." name="poin" data-toggle="tooltip" title="harap isi bidang ini">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
           </div>
