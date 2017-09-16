@@ -24,14 +24,14 @@
               <form action="{{ url('/pelanggaran') }}" method="post">
               <div class="form-group">
                 <label style="font-family: lato">Pelanggaran:</label>
-                <input style="color: black" autocomplete="off" type="text" class="form-control" placeholder="Tulis pelanggaran..." name="pelanggaran" data-toggle="tooltip" title="harap isi bidang ini" autofocus>
+                <input style="color: black" autocomplete="off" type="text" class="form-control" placeholder="Tulis pelanggaran..." name="pelanggaran" required>
               </div>
           <div class="form-group">
-            <label style="font-family: lato">Poin pelanggaran:</label>
+            <label style="font-family: lato">Poin:</label>
             <input style="color: black" type="text" autocomplete="off" class="form-control" id="pwd" placeholder="Tulis poin..." name="poin" data-toggle="tooltip" title="harap isi bidang ini" required>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
           </div>
-             <button type="submit" class="btn alert-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="tambah">
+             <button type="submit" class="btn alert-info btn-sm"  data-placement="bottom" title="tambah">
                 <span class="glyphicon glyphicon-Plus "></span> Tambah 
               </button>
   </form>
