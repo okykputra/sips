@@ -17,23 +17,21 @@
         <thead>
             <tr>
                 <th style="text-align: center;">No</th>
-                <th style="text-align: center;">Nama</th>
                 <th style="text-align: center;">Kelas</th>
-                <th style="text-align: center;">Pelanggaran</th>
-                <th style="text-align: center;">Point</th>
+                <th style="text-align: center;">Jurusan</th>
+                <th style="text-align: center;">Opsi</th>
             </tr>
         </thead>
         <tbody>
-            <?php $no=1 ?>
-            @foreach($catatan as $list)
-            <tr>
-                <td style="text-align: center;">{{ $no++ }}</td>
-                <td style="text-align: center;">{{ $list->nama_siswa }}</td>
-                <td style="text-align: center;">{{ $list->kelas }} {{ $list->jurusan }}</td>
-                <td style="text-align: center;">{{ $list->pelanggaran }}</td>
-                <td style="text-align: center;">{{ $list->poin }}</td>
-            </tr>
-            @endforeach
+            <?php $no=1; ?>
+            @foreach($kelas as $list)
+                <tr>
+                    <td>{{ $no++ }}</td>
+                    <td>{{ $list->kelas }}</td>
+                    <td>{{ $list->jurusan }}</td>
+                    <td><a class="btn alert-info" href="/Siswa/{{ $list->id }}"><i class="glyphicon glyphicon-folder-open"></i><span style="padding-left: 10px;" data-toggle="tooltip" title="Data siswa">Data siswa</span></a></td>
+                </tr>
+            @endforeach        
         </tbody>
         </table>
     </div>
