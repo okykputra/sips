@@ -49,7 +49,27 @@
                 <!-- end Logo smk -->
                 </div></b>
 	@else
-	<div>USser</div>
+	<div class="row">
+           <div class="col-md-4">
+                   <blockquote>
+                           Selamat datang {{ Auth::user()->name }} ! <br>di halaman ini anda akan di mudahkan untuk :
+                           <ul><br>
+                                <li>Mencatat pelanggaran siswa</li>
+                           </ul>
+                   </blockquote>
+           </div>
+           <div class="col-md-4">       
+                                <blockquote  style="font-family: lato">
+                                        <ul>
+                                          <li style="list-style-type: none"><span style="color: black; float: left;font-family: Nexa; font-size: 55px; line-height: 40px;padding-right: 3px; padding-top: 8px;">D
+                                            </span>engan adanya <b class="bold"  style="color:#3498db">program</b> ini diharapkan bisa meningkatkan kedisiplinan siswa dan mempermudah guru dalam menjalankan tugas.</li>
+                                        </ul>
+                                </blockquote>
+                        </div>
+           <div class="col-md-4">
+                                <p align="center"><img src="{{ asset('img/smk.png') }}" alt="" class="img-responsive" style="width: 250px"></p>
+                        </div>
+        </div>
 	@endif
 @stop
 </body>
