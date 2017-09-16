@@ -18,33 +18,37 @@ Route::get('/', function () {
     }
     return view('omah');
 });
-
+//Route user
 Route::group(['middleware' => 'auth'], function () {
-    //    Route::get('/link1', function ()    {
-//        // Uses Auth Middleware
-//    });
-// return view('welcome');
-    //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
-    #adminlte_routes
+    //Catat Pelanggaran
+    Route::get('Catat', 'UserController@index');
+    Route::get('/Siswa/{id}', 'UserController@tampil');
+    Route::get('/Pelanggaran/{id}', 'UserController@tambah');
+    Route::post('pelanggaran/create', 'UserController@store');
 });
 
+//Route admin
 Route::group(['middleware' => 'Admin'], function(){
+    //Pelanggaran
     Route::get('pelanggaran/index','PelanggaranController@create');
     Route::post('pelanggaran','PelanggaranController@store');
     Route::get('pelanggaran/view','PelanggaranController@index');
     Route::get('pelanggaran/edit/{id}', 'PelanggaranController@edit');
     Route::put('pelanggaran/{id}','PelanggaranController@update');
     Route::delete('pelanggaran/{id}','PelanggaranController@destroy');
+    //Siswa
     Route::get('/siswa', 'SiswaController@index');
     Route::get('/data/{id}', 'SiswaController@tampil');
     Route::get('/Tambah', 'SiswaController@kelas');
     Route::post('siswa/create', 'SiswaController@tambah');
-    Route::get('/kelas', 'SiswaController@data_kelas');
+    //kelas
     Route::get('/Add', 'SiswaController@add');
     Route::post('kelas/create', 'SiswaController@store');
     Route::delete('/delete/{id}', 'SiswaController@destroy');
     Route::get('/edit/{id}', 'SiswaController@edit');
     Route::put('update/{id}', 'SiswaController@update');
+    Route::get('/kelas', 'SiswaController@data_kelas');
+    //CRUD Siswa
     Route::get('/ubah/{id}', 'SiswaController@ubah');
     Route::put('/ubah/ganti/{id}', 'SiswaController@ganti');
     Route::delete('/data/{id}', 'SiswaController@hapus');

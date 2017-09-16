@@ -46,7 +46,7 @@
             </li>
             <li><a href="{{url('/catatan')}}"><i class='fa fa-link'></i> <span>Catatan Pelanggaran</span></a></li>
             @else
-            <li><a href="#"><i class='fa fa-link'></i> <span>Catat Pelanggar</span></a></li>
+            <li><a href="{{url('Catat')}}"><i class='fa fa-link'></i> <span>Catat Pelanggar</span></a></li>
             @endif
 
         </ul><!-- /.sidebar-menu -->
