@@ -20,6 +20,7 @@
                 <th style="text-align: center;">Nama</th>
                 <th style="text-align: center;">Kelas</th>
                 <th style="text-align: center;">Pelanggaran</th>
+                <th style="text-align: center;">Waktu</th>
                 <th style="text-align: center;">Point</th>
             </tr>
         </thead>
@@ -31,6 +32,7 @@
                 <td style="text-align: center;">{{ $list->nama_siswa }}</td>
                 <td style="text-align: center;">{{ $list->kelas }} {{ $list->jurusan }}</td>
                 <td style="text-align: center;">{{ $list->pelanggaran }}</td>
+                <td style="text-align: center;">{{ $list->created_at}}</td>
                 <td style="text-align: center;">{{ $list->poin }}</td>
             </tr>
             @endforeach
