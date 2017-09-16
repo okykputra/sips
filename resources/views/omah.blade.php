@@ -65,7 +65,7 @@
                     <!-- Tombol register -->
                     <div class="inner-addon right-addon" style="margin-top: 10px;">
                         <i class="glyphicon glyphicon-user" style="color: white"></i>
-                        <a href="{{ url('/register') }}" style="color: black;"><button style="text-align: left" class="form-control btn btn-primary">Register</button></a><br>
+                        <a href="{{ url('/register') }}" style="color: black;"><button style="text-align: left" class="form-control btn btn-primary" data-toggle='tooltip' title="register">Register</button></a><br>
                     </div>
                 </div>
             </div>
@@ -73,4 +73,9 @@
             @endif
         @endif
 </body>
+   <script>
+            $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();   
+        });
+    </script>
 </html>
