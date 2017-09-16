@@ -109,6 +109,7 @@ class SiswaController extends Controller
     public function catatan()
     {
         $catatan = DB::table('catatan_pelanggaran')
+                    ->select('siswa.nama_siswa','kelas.kelas','kelas.jurusan','pelanggaran.pelanggaran','pelanggaran.poin','catatan_pelanggaran.*')
                     ->join('siswa','siswa.id','=','catatan_pelanggaran.siswa_id')
                     ->join('pelanggaran','pelanggaran.id','=','catatan_pelanggaran.pelanggaran_id')
                     ->join('kelas','kelas.id','=','siswa.kelas_id')

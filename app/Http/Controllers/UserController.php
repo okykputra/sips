@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\timeModel;
 use Illuminate\Http\Request;
 use DB;
 
@@ -28,10 +29,15 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-       	$catat = DB::table('catatan_pelanggaran')->insert([
-                    'siswa_id' =>$request->siswa_id,
-                    'pelanggaran_id' =>$request->pelanggaran_id 
-        	]);
+       	// $catat = DB::table('catatan_pelanggaran')->insert([
+        //             'siswa_id' =>$request->siswa_id,
+        //             'pelanggaran_id' =>$request->pelanggaran_id,
+                     
+        // 	]);
+        $catat = new timeModel;
+        $catat->siswa_id = $request->siswa_id;
+        $catat->pelanggaran_id = $request->pelanggaran_id;
+        $catat->save();
       	return redirect('Catat')->with('message','Data Berhasil Di Kirim');
     }
 }
