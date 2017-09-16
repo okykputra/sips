@@ -44,13 +44,8 @@
                     <li><a href="{{url('/Tambah') }}">Tambah Data</a></li>
                 </ul>
             </li>
-            <li class="treeview">
-                <a href="#"><i class='fa fa-link'></i> <span>Opsi Pelanggaran</span> <i class="fa fa-angle-left pull-right"></i></a>
-                <ul class="treeview-menu">
-                    <li><a href="{{url('pelanggaran/index')}}">Tambah Data</a></li>
-                </ul>
-            </li>
             <li><a href="{{url('/catatan')}}"><i class='fa fa-link'></i> <span>Catatan Pelanggaran</span></a></li>
+            <li><a href="#"><i class='fa fa-link'></i> <span>Catatan Pelanggaran</span></a></li>
             @else
             <li><a href="#"><i class='fa fa-link'></i> <span>Catat Pelanggar</span></a></li>
             @endif
