@@ -33,7 +33,7 @@
         <ul class="sidebar-menu">
             
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
+            <li><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
             @if(Auth::user()->is_admin == 1)
             <li><a href="{{url('/siswa')}}"><i class='fa fa-link'></i> <span>Data Siswa</span></a></li>
             <li><a href="{{url('pelanggaran/view')}}"><i class='fa fa-link'></i> <span>Data Pelanggaran</span></a></li>

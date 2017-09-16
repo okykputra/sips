@@ -19,6 +19,7 @@
         </div>
         <small>@yield('')</small>
         <!-- content di bawah welcome -->
+	@if(Auth::user()->is_admin == 1)
         	<b><div class="row">
         		<div class="col-md-4">
         			<blockquote  style="font-family: lato">
@@ -47,6 +48,9 @@
                         </div>
                 <!-- end Logo smk -->
                 </div></b>
+	@else
+	<div>USser</div>
+	@endif
 @stop
 </body>
 </html>
