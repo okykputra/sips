@@ -27,7 +27,7 @@ class PelanggaranController extends Controller
 			$pelanggaran->poin = $request->poin;
 	        $pelanggaran->save();
 	       return redirect('pelanggaran/view');
-	    }
+	}
 
 	public function edit($id)
     {

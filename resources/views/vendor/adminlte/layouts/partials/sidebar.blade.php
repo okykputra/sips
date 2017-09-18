@@ -33,20 +33,26 @@
         <ul class="sidebar-menu">
             
             <!-- Optionally, you can add icons to the links -->
-            <li><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
+            <li><a href="{{ url('home') }}"><i class='fa fa-home'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
             @if(Auth::user()->is_admin == 1)
-            <li><a href="{{url('/siswa')}}"><i class='fa fa-link'></i> <span>Data Siswa</span></a></li>
-            <li><a href="{{url('pelanggaran/view')}}"><i class='fa fa-link'></i> <span>Data Pelanggaran</span></a></li>
-            <li><a href="{{url('kelas')}}"><i class='fa fa-link'></i> <span>Data Kelas</span></a></li>
+            <li><a href="{{url('/siswa')}}"><i class='fa fa-group'></i> <span>Data Siswa</span></a></li>
+            <li><a href="{{url('pelanggaran/view')}}"><i class='fa fa-exclamation-triangle'></i> <span>Data Pelanggaran</span></a></li>
+            <li><a href="{{url('kelas')}}"><i class='fa fa-book'></i> <span>Data Kelas</span></a></li>
             <li class="treeview">
-                <a href="#"><i class='fa fa-link'></i> <span>Opsi Siswa</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class='fa fa-chevron-circle-down'></i> <span>Opsi Siswa</span></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{url('/Tambah') }}">Tambah Data</a></li>
+                    <li><a href="{{url('/Tambah') }}"><i class='fa fa-plus-square-o'></i> <span>Tambah Data</span></a></li>
                 </ul>
             </li>
-            <li><a href="{{url('/catatan')}}"><i class='fa fa-link'></i> <span>Catatan Pelanggaran</span></a></li>
+            <li class="treeview">
+                <a href="#"><i class='fa fa-chevron-circle-down'></i><span>Pelanggaran</span></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{url('/catatan')}}"><i class='fa fa-bookmark-o'></i> <span>Catatan Pelanggaran</span></a></li>
+                    <li><a href="#"><i class='fa fa-plus-square-o'></i> <span>Tambah Pelanggar</span></a></li>
+                </ul>
+            </li>
             @else
-            <li><a href="{{url('Catat')}}"><i class='fa fa-link'></i> <span>Catat Pelanggar</span></a></li>
+            <li><a href="{{url('Catat')}}"><i class='fa fa-edit'></i> <span>Catat Pelanggar</span></a></li>
             @endif
 
         </ul><!-- /.sidebar-menu -->
