@@ -40,4 +40,11 @@ class UserController extends Controller
         $catat->save();
       	return redirect('Catat')->with('message','Data Berhasil Di Kirim');
     }
+
+    public function deleteAll(Request $request)
+    {
+        $ids = $request->ids;
+        DB::table("catatan_pelanggaran")->whereIn('id',explode(",",$ids))->delete();
+        return response()->json(['success'=>"Products Deleted successfully."]);
+    }
 }

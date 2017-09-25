@@ -53,5 +53,7 @@ Route::group(['middleware' => 'Admin'], function(){
     Route::put('/ubah/ganti/{id}', 'SiswaController@ganti');
     Route::delete('/data/{id}', 'SiswaController@hapus');
     Route::get('/catatan', 'SiswaController@catatan');
+    //catatan_pelanggaran
+    Route::delete('deleteAll', 'UserController@deleteAll');
 });
 Auth::routes();

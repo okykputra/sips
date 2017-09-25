@@ -20,7 +20,6 @@
                 <th style="text-align: center;">Nama</th>
                 <th style="text-align: center;">Kelas</th>
                 <th style="text-align: center;">Jenis Kelamin</th>
-                <th style="text-align: center;">jurusan</th>
                 <th style="text-align: center;">Alamat</th>
                 <th style="text-align: center;">No Telpon</th>
                 <th style="text-align: center;">Opsi</th>
@@ -32,19 +31,18 @@
                 <tr>
                     <td>{{ $no++ }}</td>
                     <td>{{ $list->nama_siswa }}</td>
-                    <td>{{ $list->kelas }}</td>
+                    <td>{{ $list->kelas }} {{ $list->jurusan }}</td>
                     <td>{{ $list->jenis_kelamin }}</td>
-                    <td>{{ $list->jurusan }}</td>
                     <td>{{ $list->alamat }}</td>
                     <td>{{ $list->nomer_telpon }}</td>
                     <td><form method="post" action="/data/{{ $list->id }}">
+                        <a style="" class="btn alert-info" href="/ubah/{{ $list->id }}"><span data-toggle="tooltip" title="edit" class="glyphicon glyphicon-pencil"> </span></a>
                             {{csrf_field()}}
                             <input type="hidden" name="_method" value="delete">
-                            <button class="btn alert-danger" data-toggle="tooltip" title="hapus" onclick="return konfirmasi()">
+                            <button class="btn alert-danger " data-toggle="tooltip" title="hapus" onclick="return konfirmasi()">
                                <span class="glyphicon glyphicon-trash"></span>
                             </button>
-                        </form>
-                        <a style="margin-top: -10px" class="btn alert-info " href="/ubah/{{ $list->id }}"><span data-toggle="tooltip" title="edit" class="glyphicon glyphicon-pencil"> </span></a></td>
+                        </form></td>
                 </tr>
             @endforeach        
         </tbody>

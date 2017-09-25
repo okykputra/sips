@@ -13,29 +13,29 @@
             <div class="panel-body">
                 <form action="/ubah/ganti/{{ $siswa->id }}" method="post">
                     <div class="form-group">
-                        <input type="text" name="nama_siswa" class="form-control" value="{{ $siswa->nama_siswa }}">
+                        <input style="color: black;" type="text" name="nama_siswa" class="form-control" value="{{ $siswa->nama_siswa }}">
                     </div>
                     <div class="form-group">
-                        <select name="kelas_id" class="form-control">
+                        <select name="kelas_id" style="color: black;" class="form-control">
                             @foreach($kelas as $list)
                             <option value="{{ $list->id }}" @if($list->id == $siswa->kelas_id) selected @endif>{{ $list->kelas }} {{$list->jurusan}}</option>
                             @endforeach
                         </select>
                     </div>
                     <div class="form-group">
-                            <input type="radio" name="jenis_kelamin" id="optionsRadios1" value="Laki-laki" @if($siswa->jenis_kelamin == 'laki-laki') checked @endif>
+                            <input style="color: black;" type="radio" name="jenis_kelamin" id="optionsRadios1" value="Laki-laki" @if($siswa->jenis_kelamin == 'laki-laki') checked @endif>
                             Laki-Laki
-                            <input type="radio" name="jenis_kelamin" id="optionsRadios2" value="Perempuan" @if($siswa->jenis_kelamin == 'perempuan') checked @endif>
+                            <input type="radio" style="color: black;" name="jenis_kelamin" id="optionsRadios2" value="Perempuan" @if($siswa->jenis_kelamin == 'perempuan') checked @endif>
                             Perempuan
                     </div>
                     <div class="form-group">
-                        <input type="text" name="alamat" class="form-control" value="{{ $siswa->alamat }}">
+                        <input type="text" name="alamat" style="color: black;" class="form-control" value="{{ $siswa->alamat }}">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="nomer_telpon" class="form-control" value="{{ $siswa->nomer_telpon }}">
+                        <input type="text" name="nomer_telpon" class="form-control" style="color: black;" value="{{ $siswa->nomer_telpon }}">
                     </div>
                     <div class="form-group">
-						<input type="hidden" class="form-control" name="_token" value="{{ csrf_token() }}">							
+						<input type="hidden" class="form-control" name="_token" style="color: black;" value="{{ csrf_token() }}">							
 				    </div>
                     <div class="form-group">
 						<input type="submit" name="siswa" class="btn btn-primary btn-block" value="Edit Data">
