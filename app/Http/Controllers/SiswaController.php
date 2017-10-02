@@ -116,4 +116,11 @@ class SiswaController extends Controller
                     ->get();
         return view('siswa.catatan',['catatan'=>$catatan]);
     }
+
+    public function muncul()
+    {
+        $kelas = DB::table('kelas')->get();
+        return view('pelanggaran.muncul',['kelas'=>$kelas]);
+    }
 }
+

@@ -36,6 +36,7 @@ Route::group(['middleware' => 'Admin'], function(){
     Route::get('pelanggaran/edit/{id}', 'PelanggaranController@edit');
     Route::put('pelanggaran/{id}','PelanggaranController@update');
     Route::delete('pelanggaran/{id}','PelanggaranController@destroy');
+    Route::get('Tulis', 'SiswaController@muncul');
     //Siswa
     Route::get('/siswa', 'SiswaController@index');
     Route::get('/data/{id}', 'SiswaController@tampil');
