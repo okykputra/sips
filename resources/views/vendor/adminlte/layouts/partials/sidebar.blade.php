@@ -47,6 +47,7 @@
             <li class="treeview">
                 <a href="#"><i class='fa fa-chevron-circle-down'></i><span>Pelanggaran</span></a>
                 <ul class="treeview-menu">
+                    <li><a href="{{url('pelanggaran/view')}}"><i class='fa fa-exclamation-triangle'></i> <span>Data Pelanggaran</span></a></li>
                     <li><a href="{{url('/catatan')}}"><i class='fa fa-bookmark-o'></i> <span>Catatan Pelanggaran</span></a></li>
                     <li><a href="{{url('/Tulis')}}"><i class='fa fa-plus-square-o'></i> <span>Tambah Pelanggar</span></a></li>
                 </ul>
