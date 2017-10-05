@@ -1,6 +1,6 @@
 @extends('adminlte::layouts.app')
 
-<title>Tambah Data</title>
+<title>Edit Data</title>
 
 @section('contentheader_title','Tambah Data')
 
